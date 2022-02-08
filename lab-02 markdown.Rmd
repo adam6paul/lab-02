@@ -14,12 +14,12 @@ First, I need to load the tidyverse.
 
 library(tidyverse)
 
-Reading the datafile we'll be working with.
+Reading the data file we'll be working with.
 
 plastic_waste <- read.csv("data/plastic-waste.csv")
 
 
-``` Exercises!
+Exercises!
 
 The first thing the exercise has us do is look at the data broadly.
 
@@ -35,5 +35,43 @@ What the code below is doing, for my own sake, is using ggplot to create a graph
 ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
   geom_histogram(binwidth = 0.2)
 
+Looking at the graph, there's an outlier way away from all the others. One way we're shown to find out what country
+  is to filter for only results that are above a cutoff point
+
+plastic_waste %>%
+  filter(plastic_waste_per_cap > 3.5)
+
+This reveals that it is Trinidad and Tobago.
+
+``` Question 1
+1.1. Plot, using histograms, the distribution of plastic waste per capita faceted by continent. What can you say about how the continents compare to each other in terms of their plastic waste per capita?
+
+ggplot(data = plastic_waste, aes(x=plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2) +
+  facet_grid( ~ continent)
+
+What I notice is that North America, South America, and Asia are the only three that break .5 per capita.
+  Of these three, the one with the most, by a good margin, is NA. 
+  The continent with the average appearing to be the lowest is Africa, though that may be a consequence of lowest usage.
+  Uniquely, though there are some high producers in Asia, it comes the next closest (on average) to lowest waste per capita.
+
+```Question 2
+For the next part, we're looking the same information using a density plot. Several iterations are done, resulting in the one below.
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.7)
+
+However, we can improve upon this too.
+
+2.1. Recreate the density plots above using a different (lower) alpha level that works better for displaying the density curves for all continents.
+
+ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.3)
 
 ```
