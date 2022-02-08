@@ -1,0 +1,39 @@
+---
+title: "adam paul lab-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Lab 02
+
+``` Setup Steps
+First, I need to load the tidyverse.
+
+library(tidyverse)
+
+Reading the datafile we'll be working with.
+
+plastic_waste <- read.csv("data/plastic-waste.csv")
+
+
+``` Exercises!
+
+The first thing the exercise has us do is look at the data broadly.
+
+What the code below is doing, for my own sake, is using ggplot to create a graph. 
+  Data = plastic_waste picks out the dataset
+  aes is aesthetics, which is the basic layout of the graph, such as...
+  x= what is on the x-axis
+  + indicates the next step in the process
+  geom_histogram is picking out a histogram. geom indicates the family of graphical procedures.
+    Remember the documentation will have these different commands, as will a google search.
+  Binwidth picks how much data is contained within each bar.
+
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+
+
+```
