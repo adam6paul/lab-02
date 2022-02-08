@@ -217,6 +217,12 @@ summary {
 <p>After exploring some, I found 0.2 to be a good number that reveals the full set.</p>
 <p>2.2. Describe why we defined the color and fill of the curves by mapping aesthetics of the plot but we defined the alpha level as a characteristic of the plotting geom.</p>
 <p>We used aes for the color and fill of the curves because if we didn’t we wouldn’t get the legend with information about what the colors mean. defining alpha level as a characteristic is fine because we don’t need to include it in the legend, as it is being done for visualization purposes. However, not knowing what each colour means would make the graph basically useless.</p>
+<p>#Question 3</p>
+<p>Another way to visualize the data is with side-by-side box plots.</p>
+<p>ggplot(data = plastic_waste, mapping = aes(x = continent, y = plastic_waste_per_cap)) + geom_boxplot()</p>
+<p>3.1. Convert your side-by-side box plots from the previous task to violin plots. What do the violin plots reveal that box plots do not? What features are apparent in the box plots but not in the violin plots?</p>
+<p>ggplot(data = plastic_waste, mapping = aes(x = continent, y = plastic_waste_per_cap)) + geom_violin()</p>
+<p>The violin plot reveals that there is a massive amount of skew in North America.</p>
 
 
 
