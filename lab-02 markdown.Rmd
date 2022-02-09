@@ -78,7 +78,7 @@ ggplot(data = plastic_waste,
                      color = continent, 
                      fill = continent)) +
   geom_density(alpha = 0.2)
-  
+
 After exploring some, I found 0.2 to be a good number that reveals the full set.
 
 2.2. Describe why we defined the color and fill of the curves by mapping aesthetics of the plot but we defined the alpha level as a characteristic of the plotting geom.
@@ -94,7 +94,9 @@ ggplot(data = plastic_waste,
                      y = plastic_waste_per_cap)) +
   geom_boxplot()
 
+
 3.1. Convert your side-by-side box plots from the previous task to violin plots. What do the violin plots reveal that box plots do not? What features are apparent in the box plots but not in the violin plots?
+
 
 ggplot(data = plastic_waste, 
        mapping = aes(x = continent, 
@@ -102,3 +104,5 @@ ggplot(data = plastic_waste,
   geom_violin()
   
 The violin plot reveals that there is a massive amount of skew in North America.
+
+
