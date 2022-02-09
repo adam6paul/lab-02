@@ -148,5 +148,3 @@ ggplot(data = plastic_waste,
   
 Coastal pop seems to have a more strongly correlated relationship with plastic waste, such that the less
 coastal a population is, the less waste they produce.
-
-#Question 5
