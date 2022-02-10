@@ -1,17 +1,15 @@
----
-title: "Lab 02 - Plastic waste"
-author: "Adam Paul"
-date: "Insert date here"
-output: github_document
----
+Lab 02 - Plastic waste
+================
+Insert your name here
+Insert date here
 
 ## Load packages and data
 
-```{r load-packages, message=FALSE}
+``` r
 library(tidyverse) 
 ```
 
-```{r load-data, message=FALSE}
+``` r
 plastic_waste <- read.csv("data/plastic-waste.csv")
 ```
 
@@ -21,13 +19,13 @@ plastic_waste <- read.csv("data/plastic-waste.csv")
 
 Remove this text, and add your answer for Exercise 1 here.
 
-```{r plastic-waste-continent}
+``` r
 # insert code here
 ```
 
 ### Exercise 2
 
-```{r plastic-waste-density}
+``` r
 # insert code here
 ```
 
@@ -39,7 +37,7 @@ Remove this text, and add your answer for Exercise 3 here.
 
 Remove this text, and add your answer for Exercise 4 here.
 
-```{r plastic-waste-violin}
+``` r
 # insert code here
 ```
 
@@ -47,7 +45,7 @@ Remove this text, and add your answer for Exercise 4 here.
 
 Remove this text, and add your answer for Exercise 5 here.
 
-```{r plastic-waste-mismanaged}
+``` r
 # insert code here
 ```
 
@@ -55,7 +53,7 @@ Remove this text, and add your answer for Exercise 5 here.
 
 Remove this text, and add your answer for Exercise 6 here.
 
-```{r plastic-waste-mismanaged-continent}
+``` r
 # insert code here
 ```
 
@@ -63,11 +61,11 @@ Remove this text, and add your answer for Exercise 6 here.
 
 Remove this text, and add your answer for Exercise 7 here.
 
-```{r plastic-waste-population-total}
+``` r
 # insert code here
 ```
 
-```{r plastic-waste-population-coastal}
+``` r
 # insert code here
 ```
 
@@ -75,7 +73,7 @@ Remove this text, and add your answer for Exercise 7 here.
 
 Remove this text, and add your answer for Exercise 8 here.
 
-```{r recreate-viz}
+``` r
 # insert code here
 ```
 
@@ -85,16 +83,11 @@ Remove this text, and add your answer for Exercise 8 here.
 
 Try this :D
 
-ggplot(data = plastic_waste, 
-       mapping = aes(x = continent, 
-                     y = plastic_waste_per_cap)) +
-  geom_violin()+
-  geom_boxplot(width=.3, fill="green") +
-  stat_summary(fun.y=median, geom="point") 
-  
-### Exercise 5 
+ggplot(data = plastic\_waste, mapping = aes(x = continent, y =
+plastic\_waste\_per\_cap)) + geom\_violin()+ geom\_boxplot(width=.3,
+fill=“green”) + stat\_summary(fun.y=median, geom=“point”)
 
-Helpful reference:http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements
+### Exercise 5
 
-
-
+Helpful
+reference:<http://www.sthda.com/english/wiki/ggplot2-themes-and-background-colors-the-3-elements>
